@@ -1,0 +1,179 @@
+[root@b9app-b9test logs]# cat applicationNavigator.log
+[Tue, 27-Nov-2018 @ 00:00:04.666] [localhost-startStop-1] ERROR org.grails.plugin.resource.ResourceMeta  - While processing /plugins/banner-core-9.26.1/css/timeout-rtl.css, a resource was required but not found: /plugins/banner-core-9.26.1/images/info-co.png
+[Tue, 27-Nov-2018 @ 00:50:53.541] [http-bio-8443-exec-5] ERROR org.codehaus.groovy.grails.web.errors.GrailsExceptionResolver  - SQLSyntaxErrorException occurred when processing request: [GET] /applicationNavigator/commonMenu
+ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+. Stacktrace follows:
+java.sql.SQLSyntaxErrorException: ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+        at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+        at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+        at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+        at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+        at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:205)
+        at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:1043)
+        at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3694)
+        at oracle.jdbc.driver.OracleCallableStatement.executeUpdate(OracleCallableStatement.java:4780)
+        at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1354)
+        at net.hedtech.banner.db.BannerDS.unlockRole(BannerDS.groovy:557)
+        at net.hedtech.banner.db.BannerDS$_setRoles_closure2.doCall(BannerDS.groovy:508)
+        at net.hedtech.banner.db.BannerDS.setRoles(BannerDS.groovy:506)
+        at net.hedtech.banner.db.BannerDS.getConnection(BannerDS.groovy:112)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenu(CommonMenuController.groovy:253)
+        at net.hedtech.seamless.menu.CommonMenuController.getFirstLevelMenuList(CommonMenuController.groovy:265)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenuData(CommonMenuController.groovy:242)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure3.doCall(CommonMenuController.groovy:182)
+        at net.hedtech.seamless.menu.CommonMenuController.getSubMenuData(CommonMenuController.groovy:136)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure2.doCall(CommonMenuController.groovy:89)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure1.doCall(CommonMenuController.groovy:66)
+        at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+        at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:53)
+        at net.hedtech.banner.security.BannerMepCodeFilter.doFilter(BannerMepCodeFilter.groovy:22)
+        at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:62)
+        at net.hedtech.seamless.RetainFragmentFilter.doFilter(RetainFragmentFilter.groovy:84)
+        at org.jasig.cas.client.util.HttpServletRequestWrapperFilter.doFilter(HttpServletRequestWrapperFilter.java:70)
+        at org.jasig.cas.client.validation.AbstractTicketValidationFilter.doFilter(AbstractTicketValidationFilter.java:238)
+        at org.jasig.cas.client.session.SingleSignOutFilter.doFilter(SingleSignOutFilter.java:100)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:748)
+[Tue, 27-Nov-2018 @ 00:52:12.013] [http-bio-8443-exec-3] ERROR org.codehaus.groovy.grails.web.errors.GrailsExceptionResolver  - SQLSyntaxErrorException occurred when processing request: [GET] /applicationNavigator/commonMenu
+ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+. Stacktrace follows:
+java.sql.SQLSyntaxErrorException: ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+        at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+        at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+        at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+        at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+        at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:205)
+        at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:1043)
+        at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3694)
+        at oracle.jdbc.driver.OracleCallableStatement.executeUpdate(OracleCallableStatement.java:4780)
+        at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1354)
+        at net.hedtech.banner.db.BannerDS.unlockRole(BannerDS.groovy:557)
+        at net.hedtech.banner.db.BannerDS$_setRoles_closure2.doCall(BannerDS.groovy:508)
+        at net.hedtech.banner.db.BannerDS.setRoles(BannerDS.groovy:506)
+        at net.hedtech.banner.db.BannerDS.getConnection(BannerDS.groovy:112)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenu(CommonMenuController.groovy:253)
+        at net.hedtech.seamless.menu.CommonMenuController.getFirstLevelMenuList(CommonMenuController.groovy:265)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenuData(CommonMenuController.groovy:242)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure3.doCall(CommonMenuController.groovy:182)
+        at net.hedtech.seamless.menu.CommonMenuController.getSubMenuData(CommonMenuController.groovy:136)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure2.doCall(CommonMenuController.groovy:89)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure1.doCall(CommonMenuController.groovy:66)
+        at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+        at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:53)
+        at net.hedtech.banner.security.BannerMepCodeFilter.doFilter(BannerMepCodeFilter.groovy:22)
+        at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:62)
+        at net.hedtech.seamless.RetainFragmentFilter.doFilter(RetainFragmentFilter.groovy:84)
+        at org.jasig.cas.client.util.HttpServletRequestWrapperFilter.doFilter(HttpServletRequestWrapperFilter.java:70)
+        at org.jasig.cas.client.validation.AbstractTicketValidationFilter.doFilter(AbstractTicketValidationFilter.java:238)
+        at org.jasig.cas.client.session.SingleSignOutFilter.doFilter(SingleSignOutFilter.java:100)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:748)
+[Tue, 27-Nov-2018 @ 02:10:48.005] [http-bio-8443-exec-9] ERROR org.codehaus.groovy.grails.web.errors.GrailsExceptionResolver  - SQLSyntaxErrorException occurred when processing request: [GET] /applicationNavigator/commonMenu
+ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+. Stacktrace follows:
+java.sql.SQLSyntaxErrorException: ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+        at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+        at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+        at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+        at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+        at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:205)
+        at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:1043)
+        at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3694)
+        at oracle.jdbc.driver.OracleCallableStatement.executeUpdate(OracleCallableStatement.java:4780)
+        at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1354)
+        at net.hedtech.banner.db.BannerDS.unlockRole(BannerDS.groovy:557)
+        at net.hedtech.banner.db.BannerDS$_setRoles_closure2.doCall(BannerDS.groovy:508)
+        at net.hedtech.banner.db.BannerDS.setRoles(BannerDS.groovy:506)
+        at net.hedtech.banner.db.BannerDS.getConnection(BannerDS.groovy:112)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenu(CommonMenuController.groovy:253)
+        at net.hedtech.seamless.menu.CommonMenuController.getFirstLevelMenuList(CommonMenuController.groovy:265)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenuData(CommonMenuController.groovy:242)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure3.doCall(CommonMenuController.groovy:182)
+        at net.hedtech.seamless.menu.CommonMenuController.getSubMenuData(CommonMenuController.groovy:136)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure2.doCall(CommonMenuController.groovy:89)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure1.doCall(CommonMenuController.groovy:66)
+        at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+        at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:53)
+        at net.hedtech.banner.security.BannerMepCodeFilter.doFilter(BannerMepCodeFilter.groovy:22)
+        at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:62)
+        at net.hedtech.seamless.RetainFragmentFilter.doFilter(RetainFragmentFilter.groovy:84)
+        at org.jasig.cas.client.util.HttpServletRequestWrapperFilter.doFilter(HttpServletRequestWrapperFilter.java:70)
+        at org.jasig.cas.client.validation.AbstractTicketValidationFilter.doFilter(AbstractTicketValidationFilter.java:238)
+        at org.jasig.cas.client.session.SingleSignOutFilter.doFilter(SingleSignOutFilter.java:100)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:748)
+[Tue, 27-Nov-2018 @ 02:10:49.168] [http-bio-8443-exec-4] ERROR org.codehaus.groovy.grails.web.errors.GrailsExceptionResolver  - SQLSyntaxErrorException occurred when processing request: [GET] /applicationNavigator/commonMenu
+ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+. Stacktrace follows:
+java.sql.SQLSyntaxErrorException: ORA-01924: role 'BAN_DEFAULT_M' not granted or does not exist
+ORA-06512: at "SYS.DBMS_SESSION", line 172
+ORA-06512: at line 1
+
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:447)
+        at oracle.jdbc.driver.T4CTTIoer.processError(T4CTTIoer.java:396)
+        at oracle.jdbc.driver.T4C8Oall.processError(T4C8Oall.java:951)
+        at oracle.jdbc.driver.T4CTTIfun.receive(T4CTTIfun.java:513)
+        at oracle.jdbc.driver.T4CTTIfun.doRPC(T4CTTIfun.java:227)
+        at oracle.jdbc.driver.T4C8Oall.doOALL(T4C8Oall.java:531)
+        at oracle.jdbc.driver.T4CCallableStatement.doOall8(T4CCallableStatement.java:205)
+        at oracle.jdbc.driver.T4CCallableStatement.executeForRows(T4CCallableStatement.java:1043)
+        at oracle.jdbc.driver.OracleStatement.doExecuteWithTimeout(OracleStatement.java:1336)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeInternal(OraclePreparedStatement.java:3613)
+        at oracle.jdbc.driver.OraclePreparedStatement.executeUpdate(OraclePreparedStatement.java:3694)
+        at oracle.jdbc.driver.OracleCallableStatement.executeUpdate(OracleCallableStatement.java:4780)
+        at oracle.jdbc.driver.OraclePreparedStatementWrapper.executeUpdate(OraclePreparedStatementWrapper.java:1354)
+        at net.hedtech.banner.db.BannerDS.unlockRole(BannerDS.groovy:557)
+        at net.hedtech.banner.db.BannerDS$_setRoles_closure2.doCall(BannerDS.groovy:508)
+        at net.hedtech.banner.db.BannerDS.setRoles(BannerDS.groovy:506)
+        at net.hedtech.banner.db.BannerDS.getConnection(BannerDS.groovy:112)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenu(CommonMenuController.groovy:253)
+        at net.hedtech.seamless.menu.CommonMenuController.getFirstLevelMenuList(CommonMenuController.groovy:265)
+        at net.hedtech.seamless.menu.CommonMenuController.getMenuData(CommonMenuController.groovy:242)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure3.doCall(CommonMenuController.groovy:182)
+        at net.hedtech.seamless.menu.CommonMenuController.getSubMenuData(CommonMenuController.groovy:136)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure2.doCall(CommonMenuController.groovy:89)
+        at net.hedtech.seamless.menu.CommonMenuController$_closure1.doCall(CommonMenuController.groovy:66)
+        at grails.plugin.springsecurity.web.filter.GrailsAnonymousAuthenticationFilter.doFilter(GrailsAnonymousAuthenticationFilter.java:53)
+        at grails.plugin.springsecurity.web.authentication.RequestHolderAuthenticationFilter.doFilter(RequestHolderAuthenticationFilter.java:53)
+        at net.hedtech.banner.security.BannerMepCodeFilter.doFilter(BannerMepCodeFilter.groovy:22)
+        at grails.plugin.springsecurity.web.authentication.logout.MutableLogoutFilter.doFilter(MutableLogoutFilter.java:62)
+        at net.hedtech.seamless.RetainFragmentFilter.doFilter(RetainFragmentFilter.groovy:84)
+        at org.jasig.cas.client.util.HttpServletRequestWrapperFilter.doFilter(HttpServletRequestWrapperFilter.java:70)
+        at org.jasig.cas.client.validation.AbstractTicketValidationFilter.doFilter(AbstractTicketValidationFilter.java:238)
+        at org.jasig.cas.client.session.SingleSignOutFilter.doFilter(SingleSignOutFilter.java:100)
+        at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+        at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+        at java.lang.Thread.run(Thread.java:748)
+[root@b9app-b9test logs]#
